@@ -1,0 +1,17 @@
+*{ Teste de erros SINTÁTICOS — todas as linhas têm tokens válidos }*
+*{ (passam no AFD), mas violam a gramática LL(1) e devem ser }*
+*{ rejeitadas pelo parser, com mensagem indicando linha/coluna. }*
+
+*{ Cada linha abaixo isoladamente provoca um erro sintático. Para rodar: }*
+*{ python AnalisadorSemantico.py teste_erro_sintatico.txt }*
+
+*{ (Comente todas as outras linhas e deixe apenas a que quiser testar.) }*
+(START)
+(3 2 +)
+(3 2 +)
+(27 RES)
+(3 2)
+(3 2 +)
+(((1 2 +) 3 4 -) WHILE)
+(1 RES MEM)
+(END)/

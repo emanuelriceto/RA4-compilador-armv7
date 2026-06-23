@@ -1,0 +1,32 @@
+*{ Teste 3 — Expressões aninhadas profundas e relacionais (bool). }*
+*{ Cobre todos os operadores e os três comandos especiais. Mistura int }*
+*{ e real apenas em contextos separados (cada operação é homogênea). }*
+*{ Demonstra os tipos int, real e bool. }*
+
+(START)
+*{ aritmética inteira aninhada → ((10+3)*2 - 8) = 18 }*
+(((10 3 +) 2 *) 8 -)
+*{ aritmética real aninhada → ((1.5+2.5) * (4.0-2.0)) = 8.0 }*
+((1.5 2.5 +) (4.0 *{ minuendo }* 2.0 -) *)
+*{ divisão real → 1.25 }*
+(5.0 4.0 |)
+*{ divisão inteira e resto → 2 e 1 }*
+(7 3 /)
+(7 3 %)
+*{ potência inteira → 64 }*
+(4 3 ^)
+*{ relacional bool → 1 (verdadeiro) }*
+(5 3 >)              *{ comentario no fim da linha }*
+*{ relacional real → 1 (verdadeiro) }*
+(2.5 1.5 >=)
+*{ memoria SOMA recebe int, FLAG recebe bool }*
+(0 SOMA)
+((1 2 <) FLAG)
+*{ WHILE: cond bool composta, corpo decrementa contador int }*
+(10 CONT)
+(((CONT) 0 >) (((CONT) 1 -) CONT) WHILE)
+*{ IFELSE com ambos ramos bool coerentes }*
+(((SOMA) 0 ==) ((1 1 ==) RESBOOL) ((1 1 !=) RESBOOL) IFELSE)
+*{ (N RES): pega o stmt 2 posições atrás }*
+(2 RES)
+(END)

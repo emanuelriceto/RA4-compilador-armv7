@@ -1,0 +1,21 @@
+*{ Teste de erros LÉXICOS — espera-se que o programa aborte com mensagem }*
+*{ clara informando linha/coluna do problema. Use este arquivo para }*
+*{ demonstrar o tratamento de erros do AFD (Fase 1 reaproveitado). }*
+
+*{ Cada linha abaixo isoladamente provoca um erro léxico. Para rodar: }*
+*{ python AnalisadorSemantico.py teste_erro_lexico.txt }*
+
+*{ (Comente todas as outras linhas e deixe apenas a que quiser testar.) }*
+(START)
+(3 2 &)
+(3.14.5 2 +)
+(.5 2 +)
+(10x 2 +)
+(Mem)
+(A 2 =)
+(A 2 !)
+(MEM1)
+*{ comentário NÃO fechado — o AFD deve abortar com mensagem de
+   "comentário não fechado" indicando linha/coluna de abertura.
+(10 2 +)
+(END)

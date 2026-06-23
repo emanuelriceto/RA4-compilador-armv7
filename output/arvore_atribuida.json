@@ -1,0 +1,15 @@
+{
+  "tipo": "program",
+  "stmts": [
+    {
+      "tipo": "morse_word",
+      "nome": "EMANUEL",
+      "linha": 7,
+      "tipo_inferido": "indef",
+      "meta_asm": {
+        "registrador": "D0",
+        "tipo": "indef"
+      }
+    }
+  ]
+}

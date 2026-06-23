@@ -1,0 +1,31 @@
+*{ Teste 1 — Cobertura completa de operadores e comandos especiais. }*
+*{ Cobre todos os operadores (+ - * | / % ^), os três comandos especiais }*
+*{ ((N RES), (V MEM), (MEM)) e os três tipos (int, real, bool). }*
+*{ Cada operação respeita a regra de tipo homogêneo (sem promoção). }*
+
+(START)
+*{ soma inteira → 13 }*
+(10 3 +)
+*{ subtração inteira → 5 }*
+(8 3 -)
+*{ multiplicação inteira → 12 }*
+(4 3 *)
+*{ divisão inteira → 5 (operandos int) }*
+(10 *{ dividendo }* 2 /)
+*{ resto inteiro → 1 }*
+(10 3 %)
+*{ potência int^int → 32 }*
+(2 5 ^)
+*{ bloco real coexistindo no mesmo arquivo — cobre o operador | }*
+(7.5 2.5 |)             *{ divisão real → 3.0 (comentario no fim da linha) }*
+*{ memoria CONT recebe inteiro 5 }*
+(5 CONT)
+*{ leitura de memoria + multiplicação inteira → 10 }*
+((CONT) 2 *) *{ comentário no fim da linha }*
+*{ (N RES): referencia o stmt anterior (int) → 10 }*
+(1 RES)
+*{ WHILE: decrementa CONT enquanto positivo (cond bool, corpo int) }*
+(((CONT) 0 >) (((CONT) 1 -) CONT) WHILE)
+*{ IF: condição bool (CONT == 0) → executa corpo int }*
+(((CONT) 0 ==) (42 RESULT) IF)
+(END)

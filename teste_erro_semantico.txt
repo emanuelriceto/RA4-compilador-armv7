@@ -1,0 +1,38 @@
+*{ Teste de erros SEMÂNTICOS — espera-se que o programa reporte cada }*
+*{ erro semântico com linha e que NÃO gere ultima_execucao.s. }*
+*{ Use este arquivo para demonstrar a Fase 3 (análise semântica). }*
+
+*{ Cada bloco abaixo viola uma regra distinta. Comente todos exceto }*
+*{ um para isolar a mensagem que quiser observar. }*
+
+(START)
+
+*{ 1) variável não declarada — leitura de memória sem definição prévia }*
+((NAODECL) 1 +)
+
+*{ 2) redefinição com tipo incompatível: X foi int → tentamos real }*
+(10 X)
+(2.5 X)
+
+*{ 3) condição não-booleana em IF (cond deve ser bool) }*
+((1 2 +) (3 4 +) IF)
+
+*{ 4) condição não-booleana em WHILE }*
+((5 1 +) (1 2 +) WHILE)
+
+*{ 5) operação aritmética entre int e real (sem promoção implícita) }*
+(1 2.5 +)
+
+*{ 6) operador real | sobre dois inteiros (exige real) }*
+(10 3 |)
+
+*{ 7) operador int / sobre dois reais (exige int) }*
+(10.0 3.0 /)
+
+*{ 8) IFELSE com ramos divergentes (int vs real) }*
+((1 2 <) (3 4 +) (3.0 4.0 +) IFELSE)
+
+*{ 9) (N RES) inválido — referencia stmt antes do início do programa }*
+(99 RES)
+
+(END)

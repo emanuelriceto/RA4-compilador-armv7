@@ -1,0 +1,8 @@
+(START)
+*{ Código Morse do nome EMANUEL — RA4                             }*
+*{ (PALAVRA MORSE) expande automaticamente cada letra usando a    }*
+*{ tabela ASCII -> Morse do compilador (src/armv7_generator.py).  }*
+*{ Temporização: ponto=300ms, traço=600ms,                        }*
+*{ espaço intra-letra=450ms, espaço entre letras=900ms.            }*
+(EMANUEL MORSE)
+(END)
