@@ -1,11 +1,11 @@
-# RA3 9 — Analisador Semântico + Geração de Assembly ARMv7
+# RA4 9 — Analisador Semântico + Geração de Assembly ARMv7
 
 | | |
 |---|---|
 | **Instituição** | Pontifícia Universidade Católica do Paraná |
 | **Disciplina** | Linguagens Formais e Compiladores |
-| **Professor** | Frank Coelho de Alcantara |
-| **Grupo Canvas** | RA3 9 |
+| **Professor** | Valter Klein |
+| **Grupo Canvas** | RA4 9 |
 | **Fase** | 3 — Analisador Semântico |
 | **Linguagem** | Python 3.10+ |
 | **Ano/Semestre** | 2026 / 1º Semestre |
@@ -31,6 +31,7 @@
 9. [Estrutura do repositório](#9-estrutura-do-repositório)
 10. [Documentação complementar](#10-documentação-complementar)
 11. [Distribuição do trabalho](#11-distribuição-do-trabalho)
+12. [Programa de demonstração: nome em Morse](#12-programa-de-demonstração-nome-em-morse)
 
 ---
 
@@ -72,7 +73,7 @@ antigo e devolve um exit-code não-zero (ver §8).
 ### Executar um arquivo-fonte
 
 ```powershell
-cd RA3_9
+cd RA4
 python AnalisadorSemantico.py teste1.txt
 ```
 
@@ -266,7 +267,7 @@ corrija o máximo possível por execução.
 ## 9. Estrutura do repositório
 
 ```
-RA3_9/
+RA4/
 ├── AnalisadorSemantico.py          (entry point — CLI)
 ├── README.md                        (este arquivo)
 ├── gramatica.md                     (gramática LL(1) — Fase 2)
@@ -309,3 +310,96 @@ RA3_9/
 ## 11. Distribuição do trabalho
 
 Trabalho desenvolvido **integralmente e individualmente** por **Emanuel Riceto da Silva** (*emanuelriceto*), abrangendo todas as etapas da Fase 3: lexer e comentários (§1), `prepararEntradaSemantica` (§3), tabela de símbolos (§2), verificação de tipos (§4), árvore atribuída (§5), gerador ARMv7 tipado (§6), CLI (§7), arquivos de teste e a suíte end-to-end.
+
+---
+
+## 12. Programa de demonstração: nome em Morse
+
+O arquivo-fonte [morse_emanuel.txt](morse_emanuel.txt) é o programa de
+demonstração do compilador. Ele contém um único comando:
+
+```text
+(START)
+(EMANUEL MORSE)
+(END)
+```
+
+O comando `(PALAVRA MORSE)` é uma extensão da Fase 4: em **tempo de
+compilação**, o gerador percorre cada letra da palavra, consulta a tabela
+ASCII → Morse internacional (`MORSE_TABLE` em
+[src/armv7_generator.py](src/armv7_generator.py)) e expande tudo numa
+sequência de acende/apaga do **LED0** do DE1-SoC, medindo o tempo com o
+*interval timer* (0xFF202000). O programa roda em **loop infinito**.
+
+### Temporização
+
+| Símbolo | Significado | Duração base |
+|---|---|---|
+| Ponto `·` | LED aceso curto | 300 ms |
+| Traço `–` | LED aceso longo | 600 ms |
+| Espaço intra-letra | LED apagado entre símbolos da mesma letra | 450 ms |
+| Espaço entre letras | LED apagado entre letras | 900 ms |
+| Espaço entre palavras | LED apagado antes de repetir o loop | 2000 ms |
+
+> **Tempo exato da especificação.** A constante `ESCALA_TEMPO` (em
+> `src/armv7_generator.py`) está em **`1`**, ou seja, os tempos gerados são
+> exatamente os da tabela acima (a 100 MHz: ponto = 30.000.000 ciclos,
+> traço = 60.000.000, intra-letra = 45.000.000, entre-letras = 90.000.000,
+> entre-palavras = 200.000.000). Caso queira deixar a piscada mais lenta
+> apenas para ler a olho no simulador, aumente esse valor (ex.: `3`) — isso
+> multiplica todas as durações na mesma proporção, mas **deixa de bater os
+> tempos da especificação**. Após alterar, rode novamente
+> `python AnalisadorSemantico.py morse_emanuel.txt` e recarregue o `.s`.
+
+### Como executar no CPUlator
+
+1. Abra o simulador ARMv7 DE1-SoC:
+   <https://cpulator.01xz.net/?sys=arm-de1soc>
+2. Abra [output/ultima_execucao_hex.s](output/ultima_execucao_hex.s),
+   selecione todo o conteúdo (**Ctrl+A**) e copie.
+3. No editor central do CPUlator, **apague** o código de exemplo e **cole**
+   o seu.
+4. Clique em **Compile and Load** (**F5**).
+5. Clique em **Continue** (**F3**).
+6. Observe o painel **LEDR**: o **LED0** (o da extrema direita) pisca o nome
+   em Morse, em loop. Os demais LEDs permanecem apagados — isto é o esperado,
+   pois a mensagem é transmitida por um único LED **ao longo do tempo**.
+
+> Também é possível usar [output/ultima_execucao.s](output/ultima_execucao.s)
+> (Assembly legível) — o resultado no LED é idêntico.
+
+### Como interpretar a piscada do LED
+
+Toda a informação está na **duração** do aceso e do apagado:
+
+**LED aceso:**
+
+- piscada **curta** → ponto `·`
+- piscada **longa** (≈2× a curta) → traço `–`
+
+**LED apagado** (o tamanho da pausa indica a fronteira):
+
+- pausa **curta** → ainda é a mesma letra (separa símbolos)
+- pausa **média** → fim da letra, começa a próxima
+- pausa **longa** → fim da palavra → o loop reinicia
+
+### Decodificação de `EMANUEL`
+
+| Letra | Morse | Padrão do LED0 |
+|---|---|---|
+| **E** | `·` | curto |
+| **M** | `– –` | longo · longo |
+| **A** | `· –` | curto · longo |
+| **N** | `– ·` | longo · curto |
+| **U** | `· · –` | curto · curto · longo |
+| **E** | `·` | curto |
+| **L** | `· – · ·` | curto · longo · curto · curto |
+
+Sequência completa observada no LED0 (cada `/` é a pausa entre letras e o
+`//` final é a pausa longa antes de repetir):
+
+```text
+· / – – / · – / – · / · · – / · / · – · ·   //   (repete)
+E    M     A    N    U      E   L
+```
+

@@ -20,14 +20,14 @@ loop_principal:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 300 ms (x2) -> N = 60000000 ciclos @ 100 MHz ----
+    @ ---- delay 300 ms (x1) -> N = 30000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x8700
+    MOVW r0, #0xC380
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0393
+    MOVW r0, #0x01C9
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -41,14 +41,14 @@ __espera_1:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 900 ms (x2) -> N = 180000000 ciclos @ 100 MHz ----
+    @ ---- delay 900 ms (x1) -> N = 90000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x9500
+    MOVW r0, #0x4A80
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0ABA
+    MOVW r0, #0x055D
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -63,14 +63,14 @@ __espera_2:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 600 ms (x2) -> N = 120000000 ciclos @ 100 MHz ----
+    @ ---- delay 600 ms (x1) -> N = 60000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x0E00
+    MOVW r0, #0x8700
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0727
+    MOVW r0, #0x0393
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -84,14 +84,14 @@ __espera_3:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 450 ms (x2) -> N = 90000000 ciclos @ 100 MHz ----
+    @ ---- delay 450 ms (x1) -> N = 45000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x4A80
+    MOVW r0, #0xA540
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x055D
+    MOVW r0, #0x02AE
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -105,14 +105,14 @@ __espera_4:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 600 ms (x2) -> N = 120000000 ciclos @ 100 MHz ----
+    @ ---- delay 600 ms (x1) -> N = 60000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x0E00
+    MOVW r0, #0x8700
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0727
+    MOVW r0, #0x0393
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -126,14 +126,14 @@ __espera_5:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 900 ms (x2) -> N = 180000000 ciclos @ 100 MHz ----
+    @ ---- delay 900 ms (x1) -> N = 90000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x9500
+    MOVW r0, #0x4A80
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0ABA
+    MOVW r0, #0x055D
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -148,14 +148,14 @@ __espera_6:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 300 ms (x2) -> N = 60000000 ciclos @ 100 MHz ----
+    @ ---- delay 300 ms (x1) -> N = 30000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x8700
+    MOVW r0, #0xC380
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0393
+    MOVW r0, #0x01C9
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -169,14 +169,14 @@ __espera_7:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 450 ms (x2) -> N = 90000000 ciclos @ 100 MHz ----
+    @ ---- delay 450 ms (x1) -> N = 45000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x4A80
+    MOVW r0, #0xA540
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x055D
+    MOVW r0, #0x02AE
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -190,14 +190,14 @@ __espera_8:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 600 ms (x2) -> N = 120000000 ciclos @ 100 MHz ----
+    @ ---- delay 600 ms (x1) -> N = 60000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x0E00
+    MOVW r0, #0x8700
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0727
+    MOVW r0, #0x0393
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -211,14 +211,14 @@ __espera_9:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 900 ms (x2) -> N = 180000000 ciclos @ 100 MHz ----
+    @ ---- delay 900 ms (x1) -> N = 90000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x9500
+    MOVW r0, #0x4A80
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0ABA
+    MOVW r0, #0x055D
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -233,14 +233,14 @@ __espera_10:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 600 ms (x2) -> N = 120000000 ciclos @ 100 MHz ----
+    @ ---- delay 600 ms (x1) -> N = 60000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x0E00
+    MOVW r0, #0x8700
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0727
+    MOVW r0, #0x0393
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -254,14 +254,14 @@ __espera_11:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 450 ms (x2) -> N = 90000000 ciclos @ 100 MHz ----
+    @ ---- delay 450 ms (x1) -> N = 45000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x4A80
+    MOVW r0, #0xA540
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x055D
+    MOVW r0, #0x02AE
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -275,14 +275,14 @@ __espera_12:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 300 ms (x2) -> N = 60000000 ciclos @ 100 MHz ----
+    @ ---- delay 300 ms (x1) -> N = 30000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x8700
+    MOVW r0, #0xC380
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0393
+    MOVW r0, #0x01C9
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -296,14 +296,14 @@ __espera_13:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 900 ms (x2) -> N = 180000000 ciclos @ 100 MHz ----
+    @ ---- delay 900 ms (x1) -> N = 90000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x9500
+    MOVW r0, #0x4A80
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0ABA
+    MOVW r0, #0x055D
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -318,14 +318,14 @@ __espera_14:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 300 ms (x2) -> N = 60000000 ciclos @ 100 MHz ----
+    @ ---- delay 300 ms (x1) -> N = 30000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x8700
+    MOVW r0, #0xC380
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0393
+    MOVW r0, #0x01C9
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -339,14 +339,14 @@ __espera_15:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 450 ms (x2) -> N = 90000000 ciclos @ 100 MHz ----
+    @ ---- delay 450 ms (x1) -> N = 45000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x4A80
+    MOVW r0, #0xA540
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x055D
+    MOVW r0, #0x02AE
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -360,14 +360,14 @@ __espera_16:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 300 ms (x2) -> N = 60000000 ciclos @ 100 MHz ----
+    @ ---- delay 300 ms (x1) -> N = 30000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x8700
+    MOVW r0, #0xC380
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0393
+    MOVW r0, #0x01C9
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -381,14 +381,14 @@ __espera_17:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 450 ms (x2) -> N = 90000000 ciclos @ 100 MHz ----
+    @ ---- delay 450 ms (x1) -> N = 45000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x4A80
+    MOVW r0, #0xA540
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x055D
+    MOVW r0, #0x02AE
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -402,14 +402,14 @@ __espera_18:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 600 ms (x2) -> N = 120000000 ciclos @ 100 MHz ----
+    @ ---- delay 600 ms (x1) -> N = 60000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x0E00
+    MOVW r0, #0x8700
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0727
+    MOVW r0, #0x0393
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -423,14 +423,14 @@ __espera_19:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 900 ms (x2) -> N = 180000000 ciclos @ 100 MHz ----
+    @ ---- delay 900 ms (x1) -> N = 90000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x9500
+    MOVW r0, #0x4A80
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0ABA
+    MOVW r0, #0x055D
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -445,14 +445,14 @@ __espera_20:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 300 ms (x2) -> N = 60000000 ciclos @ 100 MHz ----
+    @ ---- delay 300 ms (x1) -> N = 30000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x8700
+    MOVW r0, #0xC380
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0393
+    MOVW r0, #0x01C9
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -466,14 +466,14 @@ __espera_21:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 900 ms (x2) -> N = 180000000 ciclos @ 100 MHz ----
+    @ ---- delay 900 ms (x1) -> N = 90000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x9500
+    MOVW r0, #0x4A80
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0ABA
+    MOVW r0, #0x055D
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -488,14 +488,14 @@ __espera_22:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 300 ms (x2) -> N = 60000000 ciclos @ 100 MHz ----
+    @ ---- delay 300 ms (x1) -> N = 30000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x8700
+    MOVW r0, #0xC380
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0393
+    MOVW r0, #0x01C9
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -509,14 +509,14 @@ __espera_23:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 450 ms (x2) -> N = 90000000 ciclos @ 100 MHz ----
+    @ ---- delay 450 ms (x1) -> N = 45000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x4A80
+    MOVW r0, #0xA540
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x055D
+    MOVW r0, #0x02AE
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -530,14 +530,14 @@ __espera_24:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 600 ms (x2) -> N = 120000000 ciclos @ 100 MHz ----
+    @ ---- delay 600 ms (x1) -> N = 60000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x0E00
+    MOVW r0, #0x8700
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0727
+    MOVW r0, #0x0393
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -551,14 +551,14 @@ __espera_25:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 450 ms (x2) -> N = 90000000 ciclos @ 100 MHz ----
+    @ ---- delay 450 ms (x1) -> N = 45000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x4A80
+    MOVW r0, #0xA540
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x055D
+    MOVW r0, #0x02AE
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -572,14 +572,14 @@ __espera_26:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 300 ms (x2) -> N = 60000000 ciclos @ 100 MHz ----
+    @ ---- delay 300 ms (x1) -> N = 30000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x8700
+    MOVW r0, #0xC380
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0393
+    MOVW r0, #0x01C9
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -593,14 +593,14 @@ __espera_27:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 450 ms (x2) -> N = 90000000 ciclos @ 100 MHz ----
+    @ ---- delay 450 ms (x1) -> N = 45000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x4A80
+    MOVW r0, #0xA540
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x055D
+    MOVW r0, #0x02AE
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -614,14 +614,14 @@ __espera_28:
     MOVT r1, #0xFF20
     MOV r0, #1
     STR r0, [r1]
-    @ ---- delay 300 ms (x2) -> N = 60000000 ciclos @ 100 MHz ----
+    @ ---- delay 300 ms (x1) -> N = 30000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x8700
+    MOVW r0, #0xC380
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x0393
+    MOVW r0, #0x01C9
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO
@@ -635,14 +635,14 @@ __espera_29:
     MOVT r1, #0xFF20
     MOV r0, #0
     STR r0, [r1]
-    @ ---- delay 2000 ms (x2) -> N = 400000000 ciclos @ 100 MHz ----
+    @ ---- delay 2000 ms (x1) -> N = 200000000 ciclos @ 100 MHz ----
     MOVW r1, #0x2000
     MOVT r1, #0xFF20
     MOV r0, #0x8
     STR r0, [r1, #4]      @ control = STOP
-    MOVW r0, #0x8400
+    MOVW r0, #0xC200
     STR r0, [r1, #8]      @ periodl
-    MOVW r0, #0x17D7
+    MOVW r0, #0x0BEB
     STR r0, [r1, #12]     @ periodh
     MOV r0, #0
     STR r0, [r1, #0]      @ limpa flag TO

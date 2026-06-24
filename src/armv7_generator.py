@@ -1,9 +1,9 @@
 # Integrantes:
 #   Emanuel Riceto da Silva (emanuelriceto)
-# Grupo Canvas: RA3 9
+# Grupo Canvas: RA4 9
 # Instituição: Pontifícia Universidade Católica do Paraná
 # Disciplina: Linguagens Formais e Compiladores
-# Professor: Frank Coelho de Alcantara
+# Professor: Valter Klein
 
 # Gerador de código Assembly ARMv7 para o CPUlator DE1-SoC.
 # Recebe a AST produzida por parser_ll1.gerarArvore() e percorre
@@ -52,7 +52,7 @@ MORSE_GAP_PALAVRA_MS = 2000  # espaço entre palavras (= intervalo antes de repe
 # TODAS as durações por este fator (as proporções ponto:traço = 1:2 e os
 # espaços continuam corretos). Para o tempo EXATO da especificação
 # (ponto = 300 ms reais), basta colocar 1 aqui e recompilar.
-ESCALA_TEMPO = 2
+ESCALA_TEMPO = 1
 
 # Endereços memory-mapped do DE1-SoC, divididos em metades de 16 bits para
 # carregar via MOVW/MOVT (assim não precisamos de literal pool / LDR =).

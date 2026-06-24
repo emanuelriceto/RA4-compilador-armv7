@@ -17,199 +17,9 @@ _start:
     .word 0xE34F1F20
     .word 0xE3A00008
     .word 0xE5810004
-    .word 0xE3080700
+    .word 0xE30C0380
     .word 0xE5810008
-    .word 0xE3000393
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3090500
-    .word 0xE5810008
-    .word 0xE3000ABA
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00001
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3000E00
-    .word 0xE5810008
-    .word 0xE3000727
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3040A80
-    .word 0xE5810008
-    .word 0xE300055D
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00001
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3000E00
-    .word 0xE5810008
-    .word 0xE3000727
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3090500
-    .word 0xE5810008
-    .word 0xE3000ABA
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00001
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3080700
-    .word 0xE5810008
-    .word 0xE3000393
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3040A80
-    .word 0xE5810008
-    .word 0xE300055D
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00001
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3000E00
-    .word 0xE5810008
-    .word 0xE3000727
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3090500
-    .word 0xE5810008
-    .word 0xE3000ABA
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00001
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3000E00
-    .word 0xE5810008
-    .word 0xE3000727
+    .word 0xE30001C9
     .word 0xE581000C
     .word 0xE3A00000
     .word 0xE5810000
@@ -264,9 +74,85 @@ _start:
     .word 0xE34F1F20
     .word 0xE3A00008
     .word 0xE5810004
-    .word 0xE3090500
+    .word 0xE30A0540
     .word 0xE5810008
-    .word 0xE3000ABA
+    .word 0xE30002AE
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00001
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE3080700
+    .word 0xE5810008
+    .word 0xE3000393
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE3040A80
+    .word 0xE5810008
+    .word 0xE300055D
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00001
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE30C0380
+    .word 0xE5810008
+    .word 0xE30001C9
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE30A0540
+    .word 0xE5810008
+    .word 0xE30002AE
     .word 0xE581000C
     .word 0xE3A00000
     .word 0xE5810000
@@ -340,9 +226,9 @@ _start:
     .word 0xE34F1F20
     .word 0xE3A00008
     .word 0xE5810004
-    .word 0xE3040A80
+    .word 0xE30A0540
     .word 0xE5810008
-    .word 0xE300055D
+    .word 0xE30002AE
     .word 0xE581000C
     .word 0xE3A00000
     .word 0xE5810000
@@ -359,85 +245,9 @@ _start:
     .word 0xE34F1F20
     .word 0xE3A00008
     .word 0xE5810004
-    .word 0xE3000E00
+    .word 0xE30C0380
     .word 0xE5810008
-    .word 0xE3000727
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3090500
-    .word 0xE5810008
-    .word 0xE3000ABA
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00001
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3080700
-    .word 0xE5810008
-    .word 0xE3000393
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3090500
-    .word 0xE5810008
-    .word 0xE3000ABA
-    .word 0xE581000C
-    .word 0xE3A00000
-    .word 0xE5810000
-    .word 0xE3A00004
-    .word 0xE5810004
-    .word 0xE5910000
-    .word 0xE3100001
-    .word 0x0AFFFFFC
-    .word 0xE3001000
-    .word 0xE34F1F20
-    .word 0xE3A00001
-    .word 0xE5810000
-    .word 0xE3021000
-    .word 0xE34F1F20
-    .word 0xE3A00008
-    .word 0xE5810004
-    .word 0xE3080700
-    .word 0xE5810008
-    .word 0xE3000393
+    .word 0xE30001C9
     .word 0xE581000C
     .word 0xE3A00000
     .word 0xE5810000
@@ -473,9 +283,9 @@ _start:
     .word 0xE34F1F20
     .word 0xE3A00008
     .word 0xE5810004
-    .word 0xE3000E00
+    .word 0xE30C0380
     .word 0xE5810008
-    .word 0xE3000727
+    .word 0xE30001C9
     .word 0xE581000C
     .word 0xE3A00000
     .word 0xE5810000
@@ -492,9 +302,47 @@ _start:
     .word 0xE34F1F20
     .word 0xE3A00008
     .word 0xE5810004
-    .word 0xE3040A80
+    .word 0xE30A0540
     .word 0xE5810008
-    .word 0xE300055D
+    .word 0xE30002AE
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00001
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE30C0380
+    .word 0xE5810008
+    .word 0xE30001C9
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE30A0540
+    .word 0xE5810008
+    .word 0xE30002AE
     .word 0xE581000C
     .word 0xE3A00000
     .word 0xE5810000
@@ -549,6 +397,82 @@ _start:
     .word 0xE34F1F20
     .word 0xE3A00008
     .word 0xE5810004
+    .word 0xE30C0380
+    .word 0xE5810008
+    .word 0xE30001C9
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE3040A80
+    .word 0xE5810008
+    .word 0xE300055D
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00001
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE30C0380
+    .word 0xE5810008
+    .word 0xE30001C9
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE30A0540
+    .word 0xE5810008
+    .word 0xE30002AE
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00001
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
     .word 0xE3080700
     .word 0xE5810008
     .word 0xE3000393
@@ -568,9 +492,85 @@ _start:
     .word 0xE34F1F20
     .word 0xE3A00008
     .word 0xE5810004
-    .word 0xE3080400
+    .word 0xE30A0540
     .word 0xE5810008
-    .word 0xE30107D7
+    .word 0xE30002AE
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00001
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE30C0380
+    .word 0xE5810008
+    .word 0xE30001C9
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE30A0540
+    .word 0xE5810008
+    .word 0xE30002AE
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00001
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE30C0380
+    .word 0xE5810008
+    .word 0xE30001C9
+    .word 0xE581000C
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3A00004
+    .word 0xE5810004
+    .word 0xE5910000
+    .word 0xE3100001
+    .word 0x0AFFFFFC
+    .word 0xE3001000
+    .word 0xE34F1F20
+    .word 0xE3A00000
+    .word 0xE5810000
+    .word 0xE3021000
+    .word 0xE34F1F20
+    .word 0xE3A00008
+    .word 0xE5810004
+    .word 0xE30C0200
+    .word 0xE5810008
+    .word 0xE3000BEB
     .word 0xE581000C
     .word 0xE3A00000
     .word 0xE5810000
